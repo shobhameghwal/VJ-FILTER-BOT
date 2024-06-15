@@ -30,9 +30,9 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002181883881'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1002181883881'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6570924817').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1002168844190').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
@@ -40,7 +40,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', False)) # Set True Or False
-auth_channel = environ.get('AUTH_CHANNEL', '') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002110664825') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
@@ -103,7 +103,7 @@ VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/How_To_Open_Linkl
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'hRPS5vvZc0OGOEUQJMJzPiojoVK2')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'https://api.shareus.io/easy_api?key=bMVpG3OONFZ0jfQokHcgkN4H1oN2&link=https://shareus.io')
 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -115,7 +115,7 @@ IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 
 # Choose Option Settings 
-LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
+LANGUAGES = ["malayalam", "mal", "tamil", "punjabi" , "pun" , "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10"]
 EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40"]
 QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
